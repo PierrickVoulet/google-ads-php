@@ -59,7 +59,7 @@ class UpdateFlightsFeedItemStringAttributeValue
     private const FEED_ID = 'INSERT_FEED_ID_HERE';
     private const FEED_ITEM_ID = 'INSERT_FEED_ITEM_ID_HERE';
     private const FLIGHT_PLACEHOLDER_FIELD_NAME = 'INSERT_FLIGHT_PLACEHOLDER_FIELD_NAME_HERE';
-    private const FEED_ITEM_ATTRIBUTE_VALUE = 'INSERT_ATTRIBUTE_VALUE_HERE';
+    private const ATTRIBUTE_VALUE = 'INSERT_ATTRIBUTE_VALUE_HERE';
     private const PAGE_SIZE = 1000;
 
     public static function main()
@@ -70,8 +70,8 @@ class UpdateFlightsFeedItemStringAttributeValue
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::FEED_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::FEED_ITEM_ID => GetOpt::REQUIRED_ARGUMENT,
-            ArgumentNames::FEED_PLACEHOLDER_FIELD_NAME => GetOpt::REQUIRED_ARGUMENT,
-            ArgumentNames::FEED_ITEM_ATTRIBUTE_VALUE => GetOpt::REQUIRED_ARGUMENT
+            ArgumentNames::FLIGHT_PLACEHOLDER_FIELD_NAME => GetOpt::REQUIRED_ARGUMENT,
+            ArgumentNames::ATTRIBUTE_VALUE => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
@@ -90,10 +90,10 @@ class UpdateFlightsFeedItemStringAttributeValue
                 $options[ArgumentNames::CUSTOMER_ID] ?: self::CUSTOMER_ID,
                 $options[ArgumentNames::FEED_ID] ?: self::FEED_ID,
                 $options[ArgumentNames::FEED_ITEM_ID] ?: self::FEED_ITEM_ID,
-                $options[ArgumentNames::FEED_PLACEHOLDER_FIELD_NAME]
+                $options[ArgumentNames::FLIGHT_PLACEHOLDER_FIELD_NAME]
                     ?: self::FLIGHT_PLACEHOLDER_FIELD_NAME,
-                $options[ArgumentNames::FEED_ITEM_ATTRIBUTE_VALUE]
-                    ?: self::FEED_ITEM_ATTRIBUTE_VALUE
+                $options[ArgumentNames::ATTRIBUTE_VALUE]
+                    ?: self::ATTRIBUTE_VALUE
             );
         } catch (GoogleAdsException $googleAdsException) {
             printf(
