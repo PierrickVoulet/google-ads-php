@@ -121,6 +121,7 @@ class AddSitelinks
         $extensionFeedItems =
             self::createExtensionFeedItems($googleAdsClient, $customerId, $campaignResourceName);
 
+        // [START UwOTgyNDIw]
         // Creates a campaign extension setting using the previously created extension feed items.
         $campaignExtensionSetting = new CampaignExtensionSetting([
             'campaign' => new StringValue(['value' => $campaignResourceName]),
@@ -139,6 +140,7 @@ class AddSitelinks
             $customerId,
             [$campaignExtensionSettingOperation]
         );
+        // [END UwOTgyNDIw]
 
         // Prints the resource name of the created campaign extension setting.
         /** @var CampaignExtensionSetting $addedCampaignExtensionSetting */
@@ -158,6 +160,7 @@ class AddSitelinks
      * @param string $campaignResourceName the resource name of the campaign to target
      * @return StringValue[] the list of extension feed items' resource names
      */
+    // [START QzYTY3MDQy]
     private static function createExtensionFeedItems(
         GoogleAdsClient $googleAdsClient,
         int $customerId,
@@ -298,6 +301,7 @@ class AddSitelinks
         }
         return $createdExtensionFeedItemsResourceNames;
     }
+    // [END QzYTY3MDQy]
 
     /**
      * Creates a new sitelink feed item with the specified attributes.

@@ -140,6 +140,7 @@ class AddShoppingSmartAd
      *     group should be created for the ad group. Set to false if the listing group will be
      *     constructed elsewhere.
      */
+    // [START VjZWRjZTQ0]
     public static function runExample(
         GoogleAdsClient $googleAdsClient,
         int $customerId,
@@ -176,6 +177,7 @@ class AddShoppingSmartAd
             );
         }
     }
+    // [END VjZWRjZTQ0]
 
     /**
      * Creates a new campaign budget for Smart Shopping ads in the specified client account.
@@ -244,6 +246,7 @@ class AddShoppingSmartAd
             'merchant_id' => $merchantCenterAccountId
         ]);
 
+        // [START NhODY1NWFj]
         // Creates the campaign.
         $campaign = new Campaign([
             'name' => 'Interplanetary Cruise Campaign #' . uniqid(),
@@ -270,6 +273,7 @@ class AddShoppingSmartAd
             // Sets the budget.
             'campaign_budget' => $budgetResourceName
         ]);
+        // [END NhODY1NWFj]
 
         // Creates a campaign operation.
         $campaignOperation = new CampaignOperation();

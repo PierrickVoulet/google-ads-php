@@ -106,6 +106,7 @@ class UpdateAdGroup
      * @param int $adGroupId the ID of ad group to update
      * @param int $bidMicroAmount the bid amount in micros to use for the ad group bid
      */
+    // [START FkODExMGE5]
     public static function runExample(
         GoogleAdsClient $googleAdsClient,
         int $customerId,
@@ -142,6 +143,7 @@ class UpdateAdGroup
             PHP_EOL
         );
     }
+    // [END FkODExMGE5]
 }
 
 UpdateAdGroup::main();

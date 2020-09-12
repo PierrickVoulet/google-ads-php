@@ -153,6 +153,7 @@ class ForecastReach
      *
      * @param GoogleAdsClient $googleAdsClient the Google Ads API client
      */
+    // [START ZmNWU3YjY4]
     private static function showPlannableProducts(GoogleAdsClient $googleAdsClient)
     {
         $response = $googleAdsClient->getReachPlanServiceClient()->listPlannableProducts(
@@ -180,6 +181,7 @@ class ForecastReach
             }
         }
     }
+    // [END ZmNWU3YjY4]
 
     /**
      * Retrieves and prints the reach curve for a given product mix.
@@ -192,6 +194,7 @@ class ForecastReach
      *     by calling ListPlannableLocations on the ReachPlanService.
      * @param string $currencyCode three-character ISO 4217 currency code
      */
+    // [START M1N2NmMzhh]
     private static function getReachCurve(
         GoogleAdsClient $googleAdsClient,
         int $customerId,
@@ -260,6 +263,7 @@ class ForecastReach
             );
         }
     }
+    // [END M1N2NmMzhh]
 
     /**
      * Gets a forecast for product mix created manually.
@@ -267,6 +271,7 @@ class ForecastReach
      * @param GoogleAdsClient $googleAdsClient the Google Ads API client
      * @param int $customerId the customer ID
      */
+    // [START g2YzAzZjVm]
     private static function forecastManualMix(GoogleAdsClient $googleAdsClient, int $customerId)
     {
         // Set up a ratio to split the budget between two products.
@@ -299,6 +304,7 @@ class ForecastReach
             self::CURRENCY_CODE
         );
     }
+    // [END g2YzAzZjVm]
 
     /**
      * Gets a forecast for a product mix based on your set of preferences.
@@ -306,6 +312,7 @@ class ForecastReach
      * @param GoogleAdsClient $googleAdsClient the Google Ads API client
      * @param int $customerId the customer ID
      */
+    // [START Q3MzJmMjE1]
     private static function forecastSuggestedMix(GoogleAdsClient $googleAdsClient, int $customerId)
     {
         $trueValue = new BoolValue(['value' => true]);
@@ -344,6 +351,7 @@ class ForecastReach
             self::CURRENCY_CODE
         );
     }
+    // [END Q3MzJmMjE1]
 }
 
 ForecastReach::main();

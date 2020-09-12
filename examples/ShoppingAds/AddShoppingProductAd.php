@@ -131,6 +131,7 @@ class AddShoppingProductAd
      *     created for the ad group. Set to false if the listing group will be constructed
      *     elsewhere. See AddShoppingProductListingGroupTree for a more comprehensive example
      */
+    // [START lhOTBlZjUz]
     public static function runExample(
         GoogleAdsClient $googleAdsClient,
         int $customerId,
@@ -163,6 +164,7 @@ class AddShoppingProductAd
             );
         }
     }
+    // [END lhOTBlZjUz]
 
     /**
      * Creates a new campaign budget in the specified client account.

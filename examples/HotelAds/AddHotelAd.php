@@ -212,6 +212,7 @@ class AddHotelAd
         int $hotelCenterAccountId,
         int $cpcBidCeilingMicroAmount
     ) {
+        // [START EyMWE1ZTA0]
         // Creates a campaign.
         $campaign = new Campaign([
             'name' => 'Interplanetary Cruise Campaign #' . uniqid(),
@@ -236,6 +237,7 @@ class AddHotelAd
                 'target_google_search' => true,
             ]),
         ]);
+        // [END EyMWE1ZTA0]
 
         // Creates a campaign operation.
         $campaignOperation = new CampaignOperation();

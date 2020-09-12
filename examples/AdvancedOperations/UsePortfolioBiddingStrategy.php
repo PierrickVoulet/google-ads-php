@@ -140,6 +140,7 @@ class UsePortfolioBiddingStrategy
      * @param int $customerId the customer ID
      * @return string the resource name of created bidding strategy
      */
+    // [START I5MGI4MGIy]
     private static function createBiddingStrategy(GoogleAdsClient $googleAdsClient, int $customerId)
     {
         // Creates a portfolio bidding strategy.
@@ -172,6 +173,7 @@ class UsePortfolioBiddingStrategy
 
         return $addedBiddingStrategy->getResourceName();
     }
+    // [END I5MGI4MGIy]
 
     /**
      * Creates an explicitly shared budget to be used to create the campaign.
@@ -180,6 +182,7 @@ class UsePortfolioBiddingStrategy
      * @param int $customerId the customer ID
      * @return string the resource name of created shared budget
      */
+    // [START c4MjhlODIy]
     private static function createSharedCampaignBudget(
         GoogleAdsClient $googleAdsClient,
         int $customerId
@@ -215,6 +218,7 @@ class UsePortfolioBiddingStrategy
 
         return $addedBudget->getResourceName();
     }
+    // [END c4MjhlODIy]
 
     /**
      * Creates a campaign with the created portfolio bidding strategy.
@@ -230,6 +234,7 @@ class UsePortfolioBiddingStrategy
         string $biddingStrategyResourceName,
         string $campaignBudgetResourceName
     ) {
+        // [START U0NTk2NDJj]
         // Creates a Search campaign.
         $campaign = new Campaign([
             'name' => 'Interplanetary Cruise #' . uniqid(),
@@ -248,6 +253,7 @@ class UsePortfolioBiddingStrategy
             'bidding_strategy' => $biddingStrategyResourceName,
             'campaign_budget' => $campaignBudgetResourceName
         ]);
+        // [END U0NTk2NDJj]
 
         // Constructs a campaign operation.
         $campaignOperation = new CampaignOperation();

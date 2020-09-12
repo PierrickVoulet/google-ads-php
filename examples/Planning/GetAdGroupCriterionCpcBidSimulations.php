@@ -108,6 +108,7 @@ class GetAdGroupCriterionCpcBidSimulations
     ) {
         $googleAdsServiceClient = $googleAdsClient->getGoogleAdsServiceClient();
 
+        // [START ZhNTQxMDVm]
         // Creates a query that retrieves the ad group criterion CPC bid simulations.
         $query = sprintf(
             'SELECT ad_group_criterion_simulation.ad_group_id, ' .
@@ -156,6 +157,7 @@ class GetAdGroupCriterionCpcBidSimulations
 
             print PHP_EOL;
         }
+        // [END ZhNTQxMDVm]
     }
 }
 
